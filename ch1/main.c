@@ -58,7 +58,7 @@ void copy_ex(void);
  * TODO 做成命令行工具
  * @return
  */
-int main() {
+int main1() {
 //    hello();
 //    temp();
 //    temp_float();
