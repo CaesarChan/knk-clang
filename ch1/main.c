@@ -12,18 +12,24 @@ void hello();
 
 void temp();
 
-void tempFloat();
+void temp_float();
 
 void p1_5();
 
-void tempConst();
+void temp_const();
+
+void copy_v1();
+
+void copy_v2();
 
 int main() {
     hello();
     temp();
-    tempFloat();
+    temp_float();
     p1_5();
-    tempConst();
+    temp_const();
+    copy_v1();
+    copy_v2();
     return 0;
 }
 
@@ -52,7 +58,7 @@ void temp() {
 
 }
 
-void tempFloat() {
+void temp_float() {
     float fahr, celsius;
     float lower, upper, step;
 
@@ -61,13 +67,13 @@ void tempFloat() {
     step = 20;
 
     fahr = lower;
-    printf("tempFloat begin==================>\n");
+    printf("temp_float begin==================>\n");
     while (fahr <= upper) {
         celsius = (5.0 / 9.0) * (fahr - 32.0);
         printf("%0.3f %6.1f\n", fahr, celsius);
         fahr = fahr + step;
     }
-    printf("<================== tempFloat end\n");
+    printf("<================== temp_float end\n");
 }
 
 void p1_5() {
@@ -88,9 +94,31 @@ void p1_5() {
     printf("<================== p1_5 end\n");
 }
 
-void tempConst() {
+void temp_const() {
     int fahr;
     for (fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP) {
         printf("%3d %6.1f\n", fahr, (5.0 / 9.0) * (fahr - 32));
+    }
+}
+
+/**
+ * copy input to output;1st version
+ */
+void copy_v1() {
+    int c;
+    c = getchar();
+    while (c != EOF) {
+        putchar(c);
+        c = getchar();
+    }
+}
+
+/**
+ * copy input to output;2nd version
+ */
+void copy_v2() {
+    int c;
+    while ((c = getchar()) != EOF) {
+        putchar(c);
     }
 }
