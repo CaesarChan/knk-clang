@@ -3,14 +3,20 @@
 //
 #include "stdio.h"
 #include "limits.h"
+#include "string.h"
 
 void p2_1_limits_h();
 
 //TODO 使用计算的方式实现
 void p2_1();
 
+int my_strlen(char s[]);
+
+void print_strlen();
+
 int main() {
-    p2_1_limits_h();
+//    p2_1_limits_h();
+    print_strlen();
 
     return 0;
 }
@@ -32,4 +38,21 @@ void p2_1_limits_h() {
     printf("long min :%ld; long max :%ld\n", LONG_MIN, LONG_MAX);
     printf("unsigned long max:%llu\n", ULLONG_MAX);
 
+}
+
+int my_strlen(char s[]) {
+    int i;
+    i = 0;
+    while (s[i] != '\0') {
+        ++i;
+    }
+    return i;
+}
+
+void print_strlen() {
+    int l, l2;
+    l = my_strlen("my_strlen");
+    l2 = strlen("my_strlen");
+    printf("len: %d\n", l);
+    printf("len2: %d\n", l2);
 }
