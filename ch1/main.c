@@ -7,6 +7,7 @@
 #define LOWER 0
 #define UPPER 300
 #define STEP 20
+#define MAXLINE 1000
 
 void hello();
 
@@ -40,6 +41,12 @@ int power_v2(int base, int n);
 
 void test_power();
 
+void longest_line();
+
+int get_line(char s[], int lim);
+
+void copy(char to[], const char from[]);
+
 int main() {
 //    hello();
 //    temp();
@@ -54,7 +61,8 @@ int main() {
 //    p1_8();
 //    count_words();
 //    count_digits();
-    test_power();
+//    test_power();
+    longest_line();
 
     return 0;
 }
@@ -284,4 +292,54 @@ int power_v2(int base, int n) {
         p = p * base;
     }
     return p;
+}
+
+
+/**
+ *  print the longest input line
+ */
+void longest_line() {
+    int len;
+    int max;
+    char line[MAXLINE];
+    char longest[MAXLINE];
+
+    max = 0;
+    while ((len = get_line(line, MAXLINE)) > 0) {
+        if (len > max) {
+            max = len;
+            copy(longest, line);
+        }
+    }
+    if (max > 0)
+        printf("%s", longest);
+
+}
+
+void copy(char to[], const char from[]) {
+    int i;
+    i = 0;
+    while ((to[i] = from[i]) != '\0')
+        ++i;
+}
+
+/**
+ * read a line into s,return length
+ * @param s
+ * @param lim
+ * @return
+ */
+int get_line(char s[], int lim) {
+    int c, i;
+    for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; i++) {
+        s[i] = c;
+    }
+
+    if (c == '\n') {
+        s[i] = c;
+        ++i;
+    }
+
+    s[i] = '\0';
+    return i;
 }
