@@ -32,6 +32,8 @@ void count_words();
 
 void p1_8();
 
+void count_digits();
+
 int main() {
 //    hello();
 //    temp();
@@ -44,7 +46,8 @@ int main() {
 //    count_chars_v2();
 //    count_lines();
 //    p1_8();
-    count_words();
+//    count_words();
+    count_digits();
     return 0;
 }
 
@@ -214,4 +217,35 @@ void count_words() {
     }
 
     printf("%d %d %d\n", nl, nw, nc);
+}
+
+/**
+ * count digits, white spaces, others
+ */
+void count_digits() {
+    int c, i, nWhite, nOther;
+    int nDigit[10];
+
+    nWhite = nOther = 0;
+
+    //初始化数据
+    for (int i = 0; i < 10; ++i) {
+        nDigit[i] = 0;
+    }
+
+    //数据统计
+    while ((c = getchar()) != EOF)
+        //数字统计
+        if (c >= '0' && c <= '9')
+            ++nDigit[c - '0'];
+        else if (c == ' ' || c == '\n' || c == '\t')
+            ++nWhite;
+        else
+            ++nOther;
+    printf("digits = ");
+    for (int i = 0; i < 10; ++i) {
+        printf(" %d", nDigit[i]);
+    }
+
+    printf(", white space = %d, other = %d\n", nWhite, nOther);
 }
