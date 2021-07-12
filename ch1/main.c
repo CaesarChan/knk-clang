@@ -28,6 +28,8 @@ void count_chars_v2();
 
 void count_lines();
 
+void count_words();
+
 void p1_8();
 
 int main() {
@@ -41,7 +43,8 @@ int main() {
 //    count_chars_v1();
 //    count_chars_v2();
 //    count_lines();
-    p1_8();
+//    p1_8();
+    count_words();
     return 0;
 }
 
@@ -186,4 +189,29 @@ void p1_8() {
         }
     }
     printf("%d %d %d\n", nl, ns, nt);
+}
+
+#define IN 1 /* inside a word */
+#define OUT 0 /* outside a word */
+
+/**
+ *  count lines, words, and characters in input
+ */
+void count_words() {
+    int c, nl, nw, nc, state;
+    state = OUT;
+    nl = nw = nc = 0;
+    while ((c = getchar()) != EOF) {
+        ++nc;
+        if (c == '\n')
+            ++nl;
+        if (c == ' ' || c == '\n' || c == '\t')
+            state = OUT;
+        else if (state == OUT) {
+            state = IN;
+            ++nw;
+        }
+    }
+
+    printf("%d %d %d\n", nl, nw, nc);
 }
