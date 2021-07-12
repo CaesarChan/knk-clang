@@ -36,6 +36,8 @@ void count_digits();
 
 int power(int base, int n);
 
+int power_v2(int base, int n);
+
 void test_power();
 
 int main() {
@@ -270,4 +272,16 @@ void test_power() {
     for (i = 0; i < 10; ++i) {
         printf("%d %d %d\n", i, power(2, i), power(-3, i));
     }
+
+    for (i = 0; i < 10; ++i) {
+        printf("%d %d %d\n", i, power_v2(2, i), power_v2(-3, i));
+    }
+}
+
+int power_v2(int base, int n) {
+    int p;
+    for (p = 1; n > 0; --n) {
+        p = p * base;
+    }
+    return p;
 }
