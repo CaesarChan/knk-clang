@@ -10,10 +10,13 @@ void temp();
 
 void tempFloat();
 
+void p1_5();
+
 int main() {
     hello();
     temp();
     tempFloat();
+    p1_5();
     return 0;
 }
 
@@ -53,5 +56,21 @@ void tempFloat() {
         celsius = (5.0 / 9.0) * (fahr - 32.0);
         printf("%0.3f %6.1f\n", fahr, celsius);
         fahr = fahr + step;
+    }
+}
+
+void p1_5() {
+    float fahr, celsius;
+    float lower, upper, step;
+
+    lower = 0;//温度下限
+    upper = 300;//温度上限
+    step = 20;
+
+    fahr = upper;
+    while (fahr >= lower) {
+        celsius = (5.0 / 9.0) * (fahr - 32.0);
+        printf("%0.3f %6.1f\n", fahr, celsius);
+        fahr = fahr - step;
     }
 }
