@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/SM1701/CLionProjects/knk-clang/main.c
+/Users/SM1701/CLionProjects/knk-clang/ch1/hello.c
 stdio.h
--
+/Users/SM1701/CLionProjects/knk-clang/ch1/stdio.h
 

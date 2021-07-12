@@ -76,27 +76,27 @@ include CMakeFiles/knk_clang.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/knk_clang.dir/flags.make
 
-CMakeFiles/knk_clang.dir/main.c.o: CMakeFiles/knk_clang.dir/flags.make
-CMakeFiles/knk_clang.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/SM1701/CLionProjects/knk-clang/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/knk_clang.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/knk_clang.dir/main.c.o -c /Users/SM1701/CLionProjects/knk-clang/main.c
+CMakeFiles/knk_clang.dir/ch1/hello.c.o: CMakeFiles/knk_clang.dir/flags.make
+CMakeFiles/knk_clang.dir/ch1/hello.c.o: ../ch1/hello.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/SM1701/CLionProjects/knk-clang/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/knk_clang.dir/ch1/hello.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/knk_clang.dir/ch1/hello.c.o -c /Users/SM1701/CLionProjects/knk-clang/ch1/hello.c
 
-CMakeFiles/knk_clang.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/knk_clang.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/SM1701/CLionProjects/knk-clang/main.c > CMakeFiles/knk_clang.dir/main.c.i
+CMakeFiles/knk_clang.dir/ch1/hello.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/knk_clang.dir/ch1/hello.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/SM1701/CLionProjects/knk-clang/ch1/hello.c > CMakeFiles/knk_clang.dir/ch1/hello.c.i
 
-CMakeFiles/knk_clang.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/knk_clang.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/SM1701/CLionProjects/knk-clang/main.c -o CMakeFiles/knk_clang.dir/main.c.s
+CMakeFiles/knk_clang.dir/ch1/hello.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/knk_clang.dir/ch1/hello.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/SM1701/CLionProjects/knk-clang/ch1/hello.c -o CMakeFiles/knk_clang.dir/ch1/hello.c.s
 
 # Object files for target knk_clang
 knk_clang_OBJECTS = \
-"CMakeFiles/knk_clang.dir/main.c.o"
+"CMakeFiles/knk_clang.dir/ch1/hello.c.o"
 
 # External object files for target knk_clang
 knk_clang_EXTERNAL_OBJECTS =
 
-knk_clang: CMakeFiles/knk_clang.dir/main.c.o
+knk_clang: CMakeFiles/knk_clang.dir/ch1/hello.c.o
 knk_clang: CMakeFiles/knk_clang.dir/build.make
 knk_clang: CMakeFiles/knk_clang.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/SM1701/CLionProjects/knk-clang/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable knk_clang"

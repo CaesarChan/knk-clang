@@ -142,32 +142,32 @@ knk_clang/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/knk_clang.dir/build.make CMakeFiles/knk_clang.dir/build
 .PHONY : knk_clang/fast
 
-main.o: main.c.o
+ch1/hello.o: ch1/hello.c.o
 
-.PHONY : main.o
+.PHONY : ch1/hello.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/knk_clang.dir/build.make CMakeFiles/knk_clang.dir/main.c.o
-.PHONY : main.c.o
+ch1/hello.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knk_clang.dir/build.make CMakeFiles/knk_clang.dir/ch1/hello.c.o
+.PHONY : ch1/hello.c.o
 
-main.i: main.c.i
+ch1/hello.i: ch1/hello.c.i
 
-.PHONY : main.i
+.PHONY : ch1/hello.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/knk_clang.dir/build.make CMakeFiles/knk_clang.dir/main.c.i
-.PHONY : main.c.i
+ch1/hello.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knk_clang.dir/build.make CMakeFiles/knk_clang.dir/ch1/hello.c.i
+.PHONY : ch1/hello.c.i
 
-main.s: main.c.s
+ch1/hello.s: ch1/hello.c.s
 
-.PHONY : main.s
+.PHONY : ch1/hello.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/knk_clang.dir/build.make CMakeFiles/knk_clang.dir/main.c.s
-.PHONY : main.c.s
+ch1/hello.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/knk_clang.dir/build.make CMakeFiles/knk_clang.dir/ch1/hello.c.s
+.PHONY : ch1/hello.c.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... knk_clang"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... ch1/hello.o"
+	@echo "... ch1/hello.i"
+	@echo "... ch1/hello.s"
 .PHONY : help
 
 

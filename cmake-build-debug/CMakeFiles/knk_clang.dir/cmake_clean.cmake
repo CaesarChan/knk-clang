@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/knk_clang.dir/main.c.o"
+  "CMakeFiles/knk_clang.dir/ch1/hello.c.o"
   "knk_clang"
   "knk_clang.pdb"
 )

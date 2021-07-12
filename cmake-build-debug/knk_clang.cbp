@@ -78,7 +78,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/SM1701/CLionProjects/knk-clang/main.c">
+		<Unit filename="/Users/SM1701/CLionProjects/knk-clang/ch1/hello.c">
 			<Option target="knk_clang"/>
 		</Unit>
 		<Unit filename="/Users/SM1701/CLionProjects/knk-clang/CMakeLists.txt">
