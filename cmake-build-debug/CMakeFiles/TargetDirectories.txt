@@ -1,0 +1,3 @@
+/Users/SM1701/CLionProjects/knk-clang/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/SM1701/CLionProjects/knk-clang/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/SM1701/CLionProjects/knk-clang/cmake-build-debug/CMakeFiles/knk_clang.dir
