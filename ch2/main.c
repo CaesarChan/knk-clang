@@ -14,9 +14,12 @@ int my_strlen(const char s[]);
 
 void print_strlen();
 
+void leap_year(int year);
+
 int main() {
 //    p2_1_limits_h();
-    print_strlen();
+//    print_strlen();
+    leap_year(2000);
 
     return 0;
 }
@@ -55,4 +58,14 @@ void print_strlen() {
     l2 = strlen("my_strlen");
     printf("len: %d\n", l);
     printf("len2: %d\n", l2);
+}
+
+void leap_year(int year) {
+
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        printf("%d is a leap year\n", year);
+    } else {
+        printf("%d is not a leap year\n", year);
+    }
+
 }
