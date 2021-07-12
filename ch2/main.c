@@ -10,7 +10,7 @@ void p2_1_limits_h();
 //TODO 使用计算的方式实现
 void p2_1();
 
-int my_strlen(char s[]);
+int my_strlen(const char s[]);
 
 void print_strlen();
 
@@ -40,7 +40,7 @@ void p2_1_limits_h() {
 
 }
 
-int my_strlen(char s[]) {
+int my_strlen(const char s[]) {
     int i;
     i = 0;
     while (s[i] != '\0') {
