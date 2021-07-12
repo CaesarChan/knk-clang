@@ -26,6 +26,10 @@ void count_chars_v1();
 
 void count_chars_v2();
 
+void count_lines();
+
+void p1_8();
+
 int main() {
 //    hello();
 //    temp();
@@ -35,7 +39,9 @@ int main() {
 //    copy_v1();
 //    copy_v2();
 //    count_chars_v1();
-    count_chars_v2();
+//    count_chars_v2();
+//    count_lines();
+    p1_8();
     return 0;
 }
 
@@ -145,4 +151,39 @@ void count_chars_v2() {
     double nc;
     for (nc = 0; getchar() != EOF; ++nc);
     printf("%0.f\n", nc);
+}
+
+void count_lines() {
+    int c, nl;
+
+    nl = 0;
+    while ((c = getchar()) != EOF)
+        if (c == '\n')
+            nl++;
+    printf("%d\n", nl);
+}
+
+/**
+ * count space table
+ */
+void p1_8() {
+    int c, nl, ns, nt;
+    nl = 0;
+    ns = 0;
+    nt = 0;
+
+    while ((c = getchar()) != EOF) {
+        if (c == '\n') {
+            nl++;
+        }
+
+        if (c == '\t') {
+            ns++;
+        }
+
+        if (c == ' ') {
+            nt++;
+        }
+    }
+    printf("%d %d %d\n", nl, ns, nt);
 }
