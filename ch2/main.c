@@ -18,13 +18,18 @@ void leap_year(int year);
 
 int my_atoi(char s[]);
 
+int my_lower(int c);
+
 void test_my_atoi();
 
 int main() {
 //    p2_1_limits_h();
 //    print_strlen();
 //    leap_year(2000);
-    test_my_atoi();
+//    test_my_atoi();
+    printf("%d\n", my_lower('A'));
+    printf("%d\n",'A');
+    printf("%d\n",'a');
 
     return 0;
 }
@@ -103,4 +108,12 @@ void test_my_atoi() {
 
     i = my_atoi("s109");
     printf("%d\n", i);
+}
+
+int my_lower(int c) {
+    if (c >= 'A' && c <= 'Z') {
+        return c + 'a' - 'A';
+    } else {
+        return c;
+    }
 }
