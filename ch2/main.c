@@ -16,10 +16,15 @@ void print_strlen();
 
 void leap_year(int year);
 
+int my_atoi(char s[]);
+
+void test_my_atoi();
+
 int main() {
 //    p2_1_limits_h();
 //    print_strlen();
-    leap_year(2000);
+//    leap_year(2000);
+    test_my_atoi();
 
     return 0;
 }
@@ -68,4 +73,34 @@ void leap_year(int year) {
         printf("%d is not a leap year\n", year);
     }
 
+}
+
+
+/**
+ * my_atoi: convert string to integer
+ * @param s
+ * @return
+ */
+int my_atoi(char *s) {
+    int i;
+    int n = 0;
+    for (i = 0; s[i] >= '0' && s[i] <= '9'; ++i) {
+        n = 10 * n + (s[i] - '0');
+    }
+    return n;
+}
+
+void test_my_atoi() {
+    int i;
+    i = my_atoi("109");
+    printf("%d\n", i);
+
+    i = my_atoi("10s9");
+    printf("%d\n", i);
+
+    i = my_atoi("109s");
+    printf("%d\n", i);
+
+    i = my_atoi("s109");
+    printf("%d\n", i);
 }
