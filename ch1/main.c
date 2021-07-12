@@ -34,6 +34,10 @@ void p1_8();
 
 void count_digits();
 
+int power(int base, int n);
+
+void test_power();
+
 int main() {
 //    hello();
 //    temp();
@@ -47,7 +51,9 @@ int main() {
 //    count_lines();
 //    p1_8();
 //    count_words();
-    count_digits();
+//    count_digits();
+    test_power();
+
     return 0;
 }
 
@@ -229,7 +235,7 @@ void count_digits() {
     nWhite = nOther = 0;
 
     //初始化数据
-    for (int i = 0; i < 10; ++i) {
+    for (i = 0; i < 10; ++i) {
         nDigit[i] = 0;
     }
 
@@ -243,9 +249,25 @@ void count_digits() {
         else
             ++nOther;
     printf("digits = ");
-    for (int i = 0; i < 10; ++i) {
+    for (i = 0; i < 10; ++i) {
         printf(" %d", nDigit[i]);
     }
 
     printf(", white space = %d, other = %d\n", nWhite, nOther);
+}
+
+int power(int base, int n) {
+    int i, p;
+    p = 1;
+    for (i = 1; i <= n; ++i) {
+        p = p * base;
+    }
+    return p;
+}
+
+void test_power() {
+    int i;
+    for (i = 0; i < 10; ++i) {
+        printf("%d %d %d\n", i, power(2, i), power(-3, i));
+    }
 }
