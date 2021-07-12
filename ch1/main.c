@@ -22,14 +22,20 @@ void copy_v1();
 
 void copy_v2();
 
+void count_chars_v1();
+
+void count_chars_v2();
+
 int main() {
-    hello();
-    temp();
-    temp_float();
-    p1_5();
-    temp_const();
-    copy_v1();
-    copy_v2();
+//    hello();
+//    temp();
+//    temp_float();
+//    p1_5();
+//    temp_const();
+//    copy_v1();
+//    copy_v2();
+//    count_chars_v1();
+    count_chars_v2();
     return 0;
 }
 
@@ -121,4 +127,22 @@ void copy_v2() {
     while ((c = getchar()) != EOF) {
         putchar(c);
     }
+}
+
+/**
+ * count characters in input; 1st version
+ */
+void count_chars_v1() {
+    long nc;
+    nc = 0;
+    while (getchar() != EOF) {
+        ++nc;
+        printf("%ld\n", nc);
+    }
+}
+
+void count_chars_v2() {
+    double nc;
+    for (nc = 0; getchar() != EOF; ++nc);
+    printf("%0.f\n", nc);
 }
