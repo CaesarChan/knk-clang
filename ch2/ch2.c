@@ -22,17 +22,7 @@ int my_lower(int c);
 
 void test_my_atoi();
 
-int main() {
-//    p2_1_limits_h();
-//    print_strlen();
-//    leap_year(2000);
-//    test_my_atoi();
-    printf("%d\n", my_lower('A'));
-    printf("%d\n",'A');
-    printf("%d\n",'a');
 
-    return 0;
-}
 
 /**
  * print from limits.h
